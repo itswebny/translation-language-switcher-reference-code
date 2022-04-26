@@ -1,3 +1,71 @@
+/**
+  Typography
+*/
+@font-face {
+    font-family: "Proxima Nova";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/proximanova/proximanova-regular.eot");
+    src: url("../fonts/proximanova/proximanova-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-regular.woff2") format("woff2"), url("../fonts/proximanova/proximanova-regular.woff") format("woff"), url("../fonts/proximanova/proximanova-regular.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Proxima Nova";
+    font-weight: 600;
+    font-style: normal;
+    src: url("../fonts/proximanova/proximanova-semibold.eot");
+    src: url("../fonts/proximanova/proximanova-semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-semibold.woff2") format("woff2"), url("../fonts/proximanova/proximanova-semibold.woff") format("woff"), url("../fonts/proximanova/proximanova-semibold.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Proxima Nova";
+    font-weight: bold;
+    font-style: normal;
+    src: url("../fonts/proximanova/proximanova-bold.eot");
+    src: url("../fonts/proximanova/proximanova-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-bold.woff2") format("woff2"), url("../fonts/proximanova/proximanova-bold.woff") format("woff"), url("../fonts/proximanova/proximanova-bold.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Proxima Nova";
+    font-weight: 800;
+    font-style: normal;
+    src: url("../fonts/proximanova/proximanova-extrabold.eot");
+    src: url("../fonts/proximanova/proximanova-extrabold.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-extrabold.woff2") format("woff2"), url("../fonts/proximanova/proximanova-extrabold.woff") format("woff"), url("../fonts/proximanova/proximanova-extrabold.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Proxima Nova";
+    font-weight: normal;
+    font-style: italic;
+    src: url("../fonts/proximanova/proximanova-italic.eot");
+    src: url("../fonts/proximanova/proximanova-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-italic.woff2") format("woff2"), url("../fonts/proximanova/proximanova-italic.woff") format("woff"), url("../fonts/proximanova/proximanova-italic.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Proxima Nova";
+    font-weight: bold;
+    font-style: italic;
+    src: url("../fonts/proximanova/proximanova-bolditalic.eot");
+    src: url("../fonts/proximanova/proximanova-bolditalic.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-bolditalic.woff2") format("woff2"), url("../fonts/proximanova/proximanova-bolditalic.woff") format("woff"), url("../fonts/proximanova/proximanova-bolditalic.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Proxima Nova";
+    font-weight: 200;
+    font-style: normal;
+    src: url("../fonts/proximanova/proximanova-light.eot");
+    src: url("../fonts/proximanova/proximanova-light.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-light.woff2") format("woff2"), url("../fonts/proximanova/proximanova-light.woff") format("woff"), url("../fonts/proximanova/proximanova-light.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Proxima Nova";
+    font-weight: 200;
+    font-style: italic;
+    src: url("../fonts/proximanova/proximanova-lightitalic.eot");
+    src: url("../fonts/proximanova/proximanova-lightitalic.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-lightitalic.woff2") format("woff2"), url("../fonts/proximanova/proximanova-lightitalic.woff") format("woff"), url("../fonts/proximanova/proximanova-lightitalic.ttf") format("truetype");
+  }
+
+
 div#translate-wrap {
     /* background: #EDEDED; */
     height: 50px;
@@ -206,6 +274,7 @@ div#translate-wrap {
       border-top: 2px #62666A solid;
       position: relative;
       z-index: 400;
+      font-family: "Proxima Nova", Arial, sans-serif;
   }
 
   .footer-translate .inside-wrap {
