@@ -305,7 +305,7 @@ div#translate-wrap {
     font: bold 16px 'Proxima Nova', sans-serif !important;
     color: #FFF!important;
     border: 2px solid #FFFFFF;
-    background: url(/profiles/custom/webny/themes/custom/webny_theme/icons/angle-down-solid.svg) center right 20px/16px no-repeat #333333;
+    background: url(../icons/angle-down-solid.svg) center right 20px/16px no-repeat #333333;
     margin: 20px auto 0;
   }
 
