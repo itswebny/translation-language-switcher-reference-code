@@ -2,11 +2,11 @@
 
 Proof of Concept Smartling Langauge Access flat file integration solution. Including minimal work to incorporate the smartling integration into your HTML website.
 
-Fristly download/clone this repo to verify you have all needed files to work.
+Firstly download/clone this repo to verify you have all needed files to work.
 
-Your HTML file needs a few additional lines in your <head> and two additional lines at the bottom of your <body>.
+Your HTML file needs a few additional lines in your `<head>` and two additional lines at the bottom of your `<body>`.
 
-Include this in your <head>
+Include this in your `<head>`
 
 ```
 <head>
@@ -17,7 +17,7 @@ Include this in your <head>
 </head>
 ```
 
-Add these two lines to the bottom of your <body> just above the </body>
+Add these two lines to the bottom of your `<body>` just above the `</body>`
 
 ```
 <script
