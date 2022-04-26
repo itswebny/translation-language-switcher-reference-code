@@ -1,0 +1,433 @@
+div#translate-wrap {
+    /* background: #EDEDED; */
+    height: 50px;
+    /* width: 100%; */
+    /* position: relative; */
+  }
+  
+  div#translate-wrap a {
+    color: #007ac2;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  div#translate-wrap div.translate-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    flex-direction: row;
+    background-color: #ededed;
+    z-index: 500;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+  }
+
+  div#translate-wrap div.translate-bar .smt-selector {
+    padding-left: 20px;
+  }
+  
+  div#translate-wrap div.translate-bar .spanish-translation-link {
+    display: flex;
+  }
+  
+  div#translate-wrap div.translate-bar span.separator {
+    margin: 0 22px;
+    font-size: 29px;
+  }
+  
+  div#translate-wrap div.translate-bar ul.smt-menu {
+    display: flex;
+    position: relative;
+    margin: 0 0 0 0 !important;
+    padding: 0 0 0 0 !important;
+    list-style: none !important;
+    z-index: 500;
+    visibility: visible;
+  }
+  
+  /* the name of language in trigger  */
+  div#translate-wrap div.translate-bar ul.smt-menu span.smt-lang {
+    color: #000 !important;
+    font: bold 16px 'Proxima Nova', sans-serif !important;
+    text-transform: capitalize;
+    padding: 10px 0;
+  }
+  
+  div#translate-wrap div.translate-bar ul.smt-menu a.smt-trigger-link {
+    background-color: #ededed !important;
+    text-transform: capitalize !important;
+    display: flex;
+  }
+  
+  div#translate-wrap div.translate-bar ul.smt-menu a.smt-trigger-link:after {
+    content: '\f078';
+    margin-left: 10px;
+    font-family: 'icomoon';
+    font-size: 16px;
+  }
+  
+  div#translate-wrap div.translate-bar ul.smt-menu a.smt-trigger-link:before {
+    content: '\f0ac';
+    font-weight: 600;
+    margin-right: 5px;
+    font-family: 'Font Awesome 5 Free';
+    font-size: 16px;
+  }
+  
+  div#translate-wrap div.translate-bar ul.smt-menu a.smt-trigger-link.open:after {
+    content: '\f077';
+    margin-left: 10px;
+    font-family: 'icomoon';
+    font-size: 16px;
+  }
+  
+  div#translate-wrap div.translate-bar div#smt-lang-selector {
+    display: flex !important;
+    align-items: center;
+    font-size: 16px !important;
+    height: 35px;
+  }
+  
+  /* container of menu items */
+  div#translate-wrap div.translate-bar ul.smt-menu ul {
+    border: none;
+    position: absolute !important;
+    list-style: none !important;
+    text-indent: none !important;
+    padding: 0 0 0 0 !important;
+    margin: 0 0 0 0 !important;
+    width: 200px !important;
+    top: 27px;
+  }
+  
+  div#translate-wrap div.translate-bar ul.smt-menu li li a {
+  }
+  
+  /* no focus dotted line  */
+  div#translate-wrap ul.smt-menu :focus {
+  }
+  
+  /* list items (includes trigger) */
+  div#translate-wrap ul.smt-menu li {
+    /* margin: 0; */
+    /* padding: 0 !important; */
+    display: block !important;
+    float: left !important;
+    background-color: #f0f0f0;
+  }
+  
+  /* item wrapper */
+  div#translate-wrap ul.smt-menu li.smt-item {
+    float: none !important;
+    display: block !important;
+  }
+  
+  /* down arrow at end of trigger link */
+  div#translate-wrap ul.smt-menu li .smt-trigger-link .smt-downArrow {
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+    background: url(bullet_arrow_down.png) no-repeat;
+  }
+  
+  /* hover state for button which opens menu */
+  div#translate-wrap ul.smt-menu li:hover .smt-trigger-link, div#translate-wrap ul.smt-menu li.sfhover .smt-trigger-link {
+  }
+  
+  /* triggers has-layout for ie6 */
+  * html .smt-trigger-link, div#translate-wrap .smt-link {
+    display: inline-block;
+  }
+  
+  /* styles trigger link */
+  div#translate-wrap ul.smt-menu a.smt-trigger-link {
+    display: block !important;
+    padding: 0px !important;
+    text-decoration: none !important;
+    font-family: 'Proxima Nova', sans-serif !important;
+    font-size: 12px !important;
+    color: #000 !important;
+    cursor: pointer;
+    border: 0px solid black;
+  }
+  
+  /* styles item link tags */
+  div#translate-wrap a.smt-link {
+    display: block !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    border: 0px solid black;
+  }
+  
+  /* menu items */
+  div#translate-wrap ul.smt-menu li li a {
+    background-color: #ededed;
+    color: #000000;
+    font-family: 'Proxima Nova', sans-serif !important;
+    font-size: 16px;
+    padding: 10px 7px 10px 44px;
+  }
+  
+  /* hover state for menu items */
+  div#translate-wrap ul.smt-menu li li a:hover {
+    background-color: #d0d0ce !important;
+    color: #000000 !important;
+  }
+  
+  /* the world "language" in trigger  */
+  div#translate-wrap ul.smt-menu span.smt-word {
+    font-weight: normal !important;
+    padding-right: 5px !important;
+  }
+  
+  /* hover state for name of language in trigger */
+  div#translate-wrap ul.smt-menu li:hover span.smt-word, div#translate-wrap ul.smt-menu li.sfhover span.smt-word {
+  }
+  
+  /* hover state for the world "language" in trigger */
+  div#translate-wrap ul.smt-menu li:hover span.smt-lang, div#translate-wrap ul.smt-menu li.sfhover span.smt-lang {
+    color: #000 !important;
+  }
+
+  .smt-trigger ul {
+    /* display:none; */
+  }
+  
+  /* footer translate styles */
+@media all and (min-width: 0px) {
+  .footer-translate {
+      background-color: #333333;
+      color: #fff;
+      width: 100%;
+      padding: 35px 0 100px;
+      border-top: 2px #62666A solid;
+      position: relative;
+      z-index: 400;
+  }
+
+  .footer-translate .inside-wrap {
+      display: block;
+      max-width: 1360px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0px;
+      position: relative;
+  }
+
+  .footer-translate .inside-wrap p {
+      font-size: 16px;
+      margin: 20px 0 0 0;
+  }
+
+  .footer-translate .inside-wrap .translation-menu {
+      width: 100%;
+  }
+
+  .footer-translate .inside-wrap .translation-menu select {
+    appearance: none;
+    width: 100%;
+    height: 50px;
+    padding: 0 0 0 20px;
+    font: bold 16px 'Proxima Nova', sans-serif !important;
+    color: #FFF!important;
+    border: 2px solid #FFFFFF;
+    background: url(/profiles/custom/webny/themes/custom/webny_theme/icons/angle-down-solid.svg) center right 20px/16px no-repeat #333333;
+    margin: 20px auto 0;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu {
+      padding-left: 0;
+      margin: 0;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu li.smt-trigger {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: relative;
+  }
+
+  /* disappear the current language link */
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu li.smt-trigger .smt-trigger-link {
+      display: none;
+  }
+
+  .footer-translate h3 {
+      margin-top: 0;
+      font-size: 1em;
+      margin-bottom:16px;
+      padding: 0;
+  }
+
+  .footer-translate h3 a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: underline;
+  }
+
+  .footer-translate h3 a:hover {
+      color: #face00;
+  }
+
+  .footer-translate h3::before {
+      content: '\f0ac';
+      font-weight: 600;
+      padding-left: 0em;
+      margin-right: 10px;
+      font-family: 'Font Awesome 5 Free';
+      color: #fff;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu ul {
+      display:flex;
+      flex-wrap: wrap;
+      margin-right: 1em;
+      width: 100% !important;
+      padding-left: 0;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu ul li.smt-item {
+      display: flex;
+      flex: 0 50%;
+      padding-top: 20px;
+      padding-bottom: 0;
+      /* mockup calls for 20px but site margins are 1em */
+      padding-right: 16px;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu .translate-select-wrap,
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu select {
+    display: block;
+  }
+
+  .footer-translate .inside-wrap .translation-menu label {
+    display:none;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu ul li.smt-item span.separator {
+    font-weight: 900;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu ul li a.smt-link {
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: underline;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu ul li a.smt-link:hover {
+      color: #face00;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu select select option[disabled] {
+    display: none;
+  }
+}
+
+@media all and (min-width: 540px) {
+  .footer-translate {
+    padding: 35px 0;
+  }
+
+  .footer-translate .inside-wrap .translation-menu select {
+    width: 400px;
+    margin: 20px 0 0 0
+  }
+}
+
+@media all and (min-width: 768px) {
+  div#translate-wrap div.translate-bar .smt-selector {
+      padding-left: 35px;
+      padding-right: 35px;
+  }
+
+  .footer-translate .inside-wrap {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .footer-translate .inside-wrap p, .footer-translate .inside-wrap h3 {
+      display: inline-block;
+      margin-top: 0;
+  }
+
+  .footer-translate .inside-wrap p {
+      font-size: 16px;
+      margin-left: 20px;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu ul {
+    display: flex !important;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu ul li.smt-item {
+      flex: 0 25%;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu ul li a.smt-link {
+      font-size: 16px;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu .translate-select-wrap,
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu select {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu ul li.smt-item {
+      flex: 0 25%;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  div#translate-wrap {
+      height: 35px;
+  }
+
+  div#translate-wrap div.translate-bar {
+      /* padding-left: 20px;
+      padding-right: 20px; */
+      height: 35px;
+  }
+
+  div#translate-wrap div.translate-bar .smt-selector {
+      padding-left: 60px;
+      padding-right: 20px;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu ul {
+      justify-content: space-between;
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 80%!important;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu ul li.smt-item {
+    padding-top: 0;
+}
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu ul li.smt-item {
+      flex: unset;
+  }
+
+  .footer-translate .inside-wrap .translation-menu ul.smt-menu ul li:nth-child(12) {
+      display: block;
+  }
+}
+
+/* RTL styling for uNav */
+
+/* CSS targeting example */
+
+/* body.right-to-left .nygov-universal-notification .nygov-emergency-title {
+  font-size: 10em !important;
+} */ 
