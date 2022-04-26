@@ -65,7 +65,7 @@ function languageAccessTemplate(site) {
                                 <a translate="no" lang="ru" class="smt-link sl_norewrite" href="https://ru.${site.noprotocolsite_url}">Русскийy</a>
                             </li>
                             <li class="smt-item">
-                                <a translate="no" lang="yi" class="smt-link sl_norewrite" href="https://yi.{{ noprotocolsite_url }}">יידיש</a>
+                                <a translate="no" lang="yi" class="smt-link sl_norewrite" href="https://yi.${site.noprotocolsite_url}">יידיש</a>
                             </li>
                             <li class="smt-item">
                                 <a translate="no" lang="bn" class="smt-link sl_norewrite" href="https://bn.${site.noprotocolsite_url}">বাঙালি</a>
@@ -80,16 +80,16 @@ function languageAccessTemplate(site) {
                                 <a translate="no" lang="it" class="smt-link sl_norewrite" href="https://it.${site.noprotocolsite_url}">Italiano</a>
                             </li>
                             <li class="smt-item">
-                                <a translate="no" lang="ar" class="smt-link sl_norewrite" href="https://ar.{{ noprotocolsite_url }}">العربية</a>
+                                <a translate="no" lang="ar" class="smt-link sl_norewrite" href="https://ar.${site.noprotocolsite_url}">العربية</a>
                             </li>
                             <li class="smt-item">
                                 <a translate="no" lang="pl" class="smt-link sl_norewrite" href="https://pl.${site.noprotocolsite_url}">Polski</a>
                             </li>
                             <li class="smt-item">
-                                <a translate="no" lang="fr" class="smt-link sl_norewrite" href="https://fr.{{ noprotocolsite_url }}">Français</a>
+                                <a translate="no" lang="fr" class="smt-link sl_norewrite" href="https://fr.${site.noprotocolsite_url}">Français</a>
                             </li>
                             <li class="smt-item">
-                                <a translate="no" lang="ur" class="smt-link sl_norewrite" href="https://ur.{{ noprotocolsite_url }}">اردو</a>
+                                <a translate="no" lang="ur" class="smt-link sl_norewrite" href="https://ur.${site.noprotocolsite_url}">اردو</a>
                             </li>
                         </ul>
                     </li>
