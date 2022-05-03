@@ -1,14 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // build object with url data
     var site = processURL();
+    // consts for js template literals
     const lang_access_template = languageAccessTemplate(site);
     const lang_access_footer_wrap = languageAccessFooterWrapTemplate();
+    // create wrapper divs
     var lang_access_header_wrap_el = document.createElement('div');
+    var lang_access_footer_wrap_el = document.createElement('div');
+    
+    // build and inject header template
     lang_access_header_wrap_el.id = 'translate-wrap';
     document.body.insertBefore(lang_access_header_wrap_el, document.body.firstChild);
     document.getElementById('translate-wrap').insertAdjacentHTML("afterbegin", lang_access_template);
-
-
-    var lang_access_footer_wrap_el = document.createElement('div');
+    // build and inject footer template
     lang_access_footer_wrap_el.id = 'footer-translate';
     lang_access_footer_wrap_el.className = 'footer-translate';
     document.body.insertBefore(lang_access_footer_wrap_el, null);
@@ -17,13 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 function processURL() {
-    var url = 'https://dfs.ny.gov/users/sign_in';
-    var url_parts = url.split('/');
     var site = {
-        protocol: url_parts[0],
-        domain: url_parts[2],
-        path: url_parts[3],
-        noprotocolsite_url: url_parts[2],
+        noprotocolsite_url: window.location.host,
     }
     return site;
 }
