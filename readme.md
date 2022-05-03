@@ -4,17 +4,17 @@ Proof of Concept Smartling Langauge Access flat file integration solution. Inclu
 
 Firstly download/clone this repo to verify you have all needed files to work.
 
+For an example to use, look at the **demo.html** file included.
+
 Your HTML file needs a few additional lines in your `<head>` and two additional lines at the bottom of your `<body>`.
 
 Include this in your `<head>`
 
 ```
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="css/language.css" rel="stylesheet" type="text/css"/>
-    <link href="fonts/fontawesome/css/all.css" rel="stylesheet" type="text/css"/>
-    <link href="fonts/icomoon/style.css" rel="stylesheet" type="text/css"/>
-</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/language.css" rel="stylesheet" type="text/css"/>
+<link href="fonts/fontawesome/css/all.css" rel="stylesheet" type="text/css"/>
+<link href="fonts/icomoon/style.css" rel="stylesheet" type="text/css"/>
 ```
 
 Add these two lines to the bottom of your `<body>` just above the `</body>`
