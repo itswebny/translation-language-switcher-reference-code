@@ -1,6 +1,12 @@
-# Language Access Flat File Integration
+# Reference Code for Smartling Language Switcher
 
-Proof of Concept Smartling Langauge Access flat file integration solution. Including minimal work to incorporate the smartling integration into your HTML website.
+Reference code for language switcher (top and bottom of page) that can be used to enable user navigation to/from Smartling language subdomains. 
+
+Using this code/design is not required - it is provided as a convenience and/or starting point for a language switcher implementation. Please modify and customize as desired.  
+
+This code is a genericized version of the code that was developed for Drupal websites by the ITS Web Platform (WebNY) Team.  The WebNY team is not available to troubleshoot or customize implementations.
+
+## Usage
 
 Firstly download/clone this repo to verify you have all needed files to work.
 
@@ -26,3 +32,4 @@ Add these two lines to the bottom of your `<body>` just above the `</body>`
   crossorigin="anonymous"></script>
 <script src="js/language.js"></script>
 ```
+
