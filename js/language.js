@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function processURL() {
     // list of possible lanaguage subdomains and www
-    const subdomains = ['es.', 'zh.', 'fr.', 'ar.', 'bn.', 'yi.', 'ur.', 'ru.', 'pl.', 'ht.', 'it.', 'ko.', 'www'];
+    const subdomains = ['es.', 'zh.', 'fr.', 'ar.', 'bn.', 'yi.', 'ur.', 'ru.', 'pl.', 'ht.', 'it.', 'ko.'];
     // get current url with no protocol
     var host = window.location.host;
     // get first three characters of url to check if a subdomain exists
@@ -31,11 +31,11 @@ function processURL() {
     if (subdomains.includes(current_subdomain)) {
         // strip subdomain when returning site
         var site = {
-            noprotocolsite_url: host.substring(3),
+            noprotocolsite_url: host.replace('www', '').substring(3),
         }
     } else {
         var site = {
-            noprotocolsite_url: window.location.host,
+            noprotocolsite_url: host.replace('www', ''),
         }
     }
     return site;
