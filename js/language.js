@@ -61,7 +61,7 @@ function languageAccessTemplate(site) {
                                 <a translate="no" lang="zh" class="smt-link sl_norewrite" href="https://zh.${site.noprotocolsite_url}">中文</a>
                             </li>
                             <li class="smt-item">
-                                <a translate="no" lang="ru" class="smt-link sl_norewrite" href="https://ru.${site.noprotocolsite_url}">Русскийy</a>
+                                <a translate="no" lang="ru" class="smt-link sl_norewrite" href="https://ru.${site.noprotocolsite_url}">Русский</a>
                             </li>
                             <li class="smt-item">
                                 <a translate="no" lang="yi" class="smt-link sl_norewrite" href="https://yi.${site.noprotocolsite_url}">יידיש</a>
