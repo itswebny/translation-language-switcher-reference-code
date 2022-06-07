@@ -21,8 +21,22 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 function processURL() {
-    var site = {
-        noprotocolsite_url: window.location.host,
+    // list of possible lanaguage subdomains and www
+    const subdomains = ['es.', 'zh.', 'fr.', 'ar.', 'bn.', 'yi.', 'ur.', 'ru.', 'pl.', 'ht.', 'it.', 'ko.', 'www'];
+    // get current url with no protocol
+    var host = window.location.host;
+    // get first three characters of url to check if a subdomain exists
+    var current_subdomain = host.substring(0, 3).toLowerCase();
+    // if current subdomain is in list of possible subdomains
+    if (subdomains.includes(current_subdomain)) {
+        // strip subdomain when returning site
+        var site = {
+            noprotocolsite_url: host.substring(3),
+        }
+    } else {
+        var site = {
+            noprotocolsite_url: window.location.host,
+        }
     }
     return site;
 }
