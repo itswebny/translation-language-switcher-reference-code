@@ -31,11 +31,11 @@ function processURL() {
     if (subdomains.includes(current_subdomain)) {
         // strip subdomain when returning site
         var site = {
-            noprotocolsite_url: host.replace('www', '').substring(3),
+            noprotocolsite_url: host.replace('www.', '').substring(3),
         }
     } else {
         var site = {
-            noprotocolsite_url: host.replace('www', ''),
+            noprotocolsite_url: host.replace('www.', ''),
         }
     }
     return site;
