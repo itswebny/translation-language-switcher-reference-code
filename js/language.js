@@ -25,17 +25,21 @@ function processURL() {
     const subdomains = ['es.', 'zh.', 'fr.', 'ar.', 'bn.', 'yi.', 'ur.', 'ru.', 'pl.', 'ht.', 'it.', 'ko.'];
     // get current url with no protocol
     var host = window.location.host;
+    // save path for link building
+    var pathname = window.location.pathname;
+    // full link without protocol
+    var fulllink = (host) + (pathname);
     // get first three characters of url to check if a subdomain exists
     var current_subdomain = host.substring(0, 3).toLowerCase();
     // if current subdomain is in list of possible subdomains
     if (subdomains.includes(current_subdomain)) {
         // strip subdomain when returning site
         var site = {
-            noprotocolsite_url: host.replace('www.', '').substring(3),
+            noprotocolsite_url: fulllink.replace('www.', '').substring(3),
         }
     } else {
         var site = {
-            noprotocolsite_url: host.replace('www.', ''),
+            noprotocolsite_url: fulllink.replace('www.', ''),
         }
     }
     return site;
