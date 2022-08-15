@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // build object with url data
     var site = processURL();
     // consts for js template literals
-    const lang_access_template = languageAccessTemplate(site);
+    const lang_access_template_header = languageAccessTemplate(site, 'langnav_header');
+    const lang_access_template_footer = languageAccessTemplate(site, 'langnav_footer');
     const lang_access_footer_wrap = languageAccessFooterWrapTemplate();
     // create wrapper divs
     var lang_access_header_wrap_el = document.createElement('div');
@@ -11,13 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // build and inject header template
     lang_access_header_wrap_el.id = 'translate-wrap';
     document.body.insertBefore(lang_access_header_wrap_el, document.body.firstChild);
-    document.getElementById('translate-wrap').insertAdjacentHTML("afterbegin", lang_access_template);
+    document.getElementById('translate-wrap').insertAdjacentHTML("afterbegin", lang_access_template_header);
     // build and inject footer template
     lang_access_footer_wrap_el.id = 'footer-translate';
     lang_access_footer_wrap_el.className = 'footer-translate';
     document.body.insertBefore(lang_access_footer_wrap_el, null);
     document.getElementById('footer-translate').insertAdjacentHTML("afterbegin", lang_access_footer_wrap);
-    document.getElementById('translation-menu').insertAdjacentHTML("afterbegin", lang_access_template);
+    document.getElementById('translation-menu').insertAdjacentHTML("afterbegin", lang_access_template_footer);
 }, false);
 
 function processURL() {
@@ -57,7 +58,7 @@ function languageAccessFooterWrapTemplate() {
     `
 }
 
-function languageAccessTemplate(site) {
+function languageAccessTemplate(site, id) {
     return `
         <div class="translate-bar">
         <!--<div id="smt-lang-selector" class="smt-selector"></div>-->
@@ -66,7 +67,7 @@ function languageAccessTemplate(site) {
                 <ul class="smt-menu">
                     <li class="smt-trigger">
                         <a class="smt-trigger-link" tabindex="0">
-                            <span class="smt-lang" id="langnav">Translate</span>
+                            <span class="smt-lang" id="${id}">Translate</span>
                         </a>
                         <ul class="language-links">
                             <li class="smt-item">
