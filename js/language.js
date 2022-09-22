@@ -63,7 +63,7 @@ function languageAccessTemplate(site, id) {
         <div class="translate-bar">
         <!--<div id="smt-lang-selector" class="smt-selector"></div>-->
         <div class="smt-selector">
-            <nav aria-labelledby="langnav">
+            <nav aria-labelledby="${id}">
                 <ul class="smt-menu">
                     <li class="smt-trigger">
                         <a class="smt-trigger-link" tabindex="0">
