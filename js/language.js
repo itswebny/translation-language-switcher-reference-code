@@ -22,27 +22,28 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 function processURL() {
+
     // list of possible lanaguage subdomains and www
-    const subdomains = ['es.', 'zh.', 'fr.', 'ar.', 'bn.', 'yi.', 'ur.', 'ru.', 'pl.', 'ht.', 'it.', 'ko.'];
-    // get current url with no protocol
-    var host = window.location.host;
+    const subdomains = ['es', 'zh', 'zh-traditional', 'fr', 'ar', 'bn', 'yi', 'ur', 'ru', 'pl', 'ht', 'it', 'ko'];
+  
+    // get current url with no www
+    var host = window.location.host.replace('www.', '');
     // save path for link building
     var pathname = window.location.pathname;
     // full link without protocol
     var fulllink = (host) + (pathname);
-    // get first three characters of url to check if a subdomain exists
-    var current_subdomain = host.substring(0, 3).toLowerCase();
-    // if current subdomain is in list of possible subdomains
+    // get everything before the first dot to check if a subdomain exists
+    var current_subdomain = window.location.host.split('.')[0].toLowerCase();  
+    
     if (subdomains.includes(current_subdomain)) {
-        // strip subdomain when returning site
-        var site = {
-            noprotocolsite_url: fulllink.replace('www.', '').substring(3),
-        }
+      // Remove everything in the fulllink variable before the first period
+      var dotIndex = fulllink.indexOf('.') + 1;
+      // strip subdomain when returning site
+      var site = { noprotocolsite_url: fulllink.substring(dotIndex) }
     } else {
-        var site = {
-            noprotocolsite_url: fulllink.replace('www.', ''),
-        }
+        var site = { noprotocolsite_url: fulllink }
     }
+  
     return site;
 }
 
@@ -53,7 +54,7 @@ function languageAccessFooterWrapTemplate() {
             <p>This page is available in other languages</p>
             <div class="translation-menu" id="translation-menu">
 
-            </div><!--translation-menu-->
+            </div><!--/translation-menu-->
         </div><!--/inside-wrap-->
     `
 }
@@ -80,13 +81,16 @@ function languageAccessTemplate(site, id) {
                                 <a translate="no" lang="zh" class="smt-link sl_norewrite" href="https://zh.${site.noprotocolsite_url}">中文</a>
                             </li>
                             <li class="smt-item">
+                                <a translate="no" lang="zh-traditional" class="smt-link sl_norewrite" href="https://zh-traditional.${site.noprotocolsite_url}">繁體中文</a>
+                            </li>
+                            <li class="smt-item">
                                 <a translate="no" lang="ru" class="smt-link sl_norewrite" href="https://ru.${site.noprotocolsite_url}">Русский</a>
                             </li>
                             <li class="smt-item">
                                 <a translate="no" lang="yi" class="smt-link sl_norewrite" href="https://yi.${site.noprotocolsite_url}">יידיש</a>
                             </li>
                             <li class="smt-item">
-                                <a translate="no" lang="bn" class="smt-link sl_norewrite" href="https://bn.${site.noprotocolsite_url}">বাঙালি</a>
+                                <a translate="no" lang="bn" class="smt-link sl_norewrite" href="https://bn.${site.noprotocolsite_url}">বাংলা</a>
                             </li>
                             <li class="smt-item">
                                 <a translate="no" lang="ko" class="smt-link sl_norewrite" href="https://ko.${site.noprotocolsite_url}">한국어</a>
